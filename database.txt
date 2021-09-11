@@ -1,0 +1,28 @@
+ `banco`.CREATE DATABASE `banco` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+DROP TABLE IF EXISTS `banco`.`banco`;
+CREATE TABLE  `banco`.`banco` (
+  `nombre` varchar(20) NOT NULL,
+  `trabajadores` int(11) NOT NULL,
+  `direccion` varchar(40) NOT NULL,
+  `dinero` int(11) NOT NULL,
+  PRIMARY KEY (`nombre`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `banco`.`cliente_del_banco`;
+CREATE TABLE  `banco`.`cliente_del_banco` (
+  `ci` int(11) NOT NULL,
+  `nombre` varchar(20) NOT NULL,
+  `apellido` varchar(20) NOT NULL,
+  PRIMARY KEY (`ci`)
+) ENGINE=Inn
+oDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `banco`.`cuenta_del_banco`;
+CREATE TABLE  `banco`.`cuenta_del_banco` (
+  `id` int(11) NOT NULL,
+  `contraseña` varchar(20) NOT NULL,
+  `saldo` int(11) NOT NULL,
+  `usuario` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
